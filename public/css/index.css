@@ -1,0 +1,41 @@
+nav, .card
+{
+  background: #1e233b;
+  color: white;
+}
+a
+{
+  color: inherit;
+}
+a:hover
+{
+  text-decoration: none;
+  color: inherit;
+}
+nav .nav-item:hover
+{
+  background: linear-gradient(to left,#ed145b,#f7288b);
+}
+@media screen and (min-width 768px)
+{
+  nav
+  {
+    height: 75px;
+  }
+}
+
+.nav-link.active {
+    background: linear-gradient(to left,#ed145b,#f7288b);
+    color: white !important;
+    border: none;
+}
+ul .nav-link
+{
+  border-radius: 0 !important;
+}
+input, .input-group-text
+{
+  background: #252c49 !important;
+  color: #495172 !important;
+}
+      
