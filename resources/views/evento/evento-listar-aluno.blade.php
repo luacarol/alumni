@@ -23,7 +23,7 @@
                                         
                                     </h3> 
                                     <p>Dia {{date('d/m/Y',strtotime($evento->data))}} das {{$evento->horarioIn}} às {{$evento->horarioFin}} </p>
-                                    <small>Número de egressos interessados: {{count($evento->interessados)}}</small>
+                                    {{-- <small>Número de egressos interessados: {{count($evento->interessados)}}</small> --}}
                                     <p class="text-justify">@php echo $evento->descricao; @endphp</p>
                                     <a href="{{route('evento.ver',$evento->id)}}" class="btn btn-block col-4 btn-primary">Ver Evento</a>
                                  </div>
