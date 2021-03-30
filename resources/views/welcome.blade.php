@@ -210,35 +210,33 @@
         <div class="row">
 
           <div class="col-lg-4 col-md-6 footer-contact" data-aos="fade-up" data-aos-delay="100">
-            <h3>Ninestars</h3>
+            <h3>IFSP Campus Jacareí</h3>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+              R. Antônio Fogaça de Almeida, 200<br>
+              Jardim America, Jacareí<br>
+              SP, 12322-030<br><br>
+              <strong>Telefone:</strong>(12) 21322-030<br>
+              <strong>Email:</strong>csp.jcr@ifsp.edu.br<br>
             </p>
           </div>
 
           <div class="col-lg-4 col-md-6 footer-links" data-aos="fade-up" data-aos-delay="200">
-            <h4>Useful Links</h4>
+            <h4>Serviços</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Perguntas Frequentes</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Contato e Localização</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">CPA</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Drive-IFSP</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Link RNP(Vialpê)</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Relatórios de Gestão</a></li>
             </ul>
           </div>
 
           <div class="col-lg-4 col-md-6 footer-links" data-aos="fade-up" data-aos-delay="300">
-            <h4>Our Services</h4>
+            <h4>Redes Sociais</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Facebook-Extensão</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Facebook-Campus</a></li>
             </ul>
           </div>
 
