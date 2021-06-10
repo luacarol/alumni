@@ -16,7 +16,7 @@ class MensagemIndexController extends Controller
 
             $mensagens = DB::table('mensagemindex')
                     ->where('idCampus',Session::get('extensao')->idCampus)
-                    ->orderBy('id','desc')
+                    ->orderBy('idCampus','desc')
                     ->get();
 
             return view('mensagem.mensagem-listar')->with(compact('mensagens'));
@@ -45,21 +45,21 @@ class MensagemIndexController extends Controller
 			'status' => 'N'
         ]);
 
-        try 
+        try
         {
             $mensagem->save();
 
             return redirect('/#contact')->with('success','Mensagem enviada com sucesso!');
-        } 
-        catch (Exception $e) 
+        }
+        catch (Exception $e)
         {
             return redirect('/#contact')->with('erro','Erro ao enviar mensagem!');
-        } 
+        }
     }
 
     public function show($id)
     {
-    	$mensagem = Mensagem::find($id);
+        $mensagem = Mensagem::find($id);
 
     	$mensagem->status = 'V';
         $mensagem->visualizadoPor = Session::get('extensao')->id;

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Evento;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
+use Symfony\Component\Console\Input\Input;
 
 class ControllerEvento extends Controller
 {
@@ -19,13 +20,13 @@ class ControllerEvento extends Controller
                     ->whereIn('idUsuarioCex',DB::table('usuariocex')
                     ->where('idCampus',Session::get('extensao')->idCampus)
                     ->select('id'))
+                    ->orderBy('data', 'asc')
                     ->get();
 
             return view('evento.evento-listar')->with(compact('eventos'));
         }
         if(Session::has('aluno'))
         {
-
             $eventos = DB::table('evento')
                 ->whereIn('idUsuarioCex',DB::table('usuariocex')
                     ->whereIn('usuariocex.idCampus',DB::table('matricula')
@@ -34,8 +35,9 @@ class ControllerEvento extends Controller
                     )->select('id'))
                 ->leftJoin('interesseevento','interesseevento.idEvento','=','evento.id')
                 ->select('evento.*','interesseevento.cpfAluno as interessados')
+                ->orderBy('data', 'desc')
                 ->get();
-                
+
             return view('evento.evento-listar-aluno')->with(compact(('eventos')));
         }
     }
@@ -59,24 +61,23 @@ class ControllerEvento extends Controller
             ]);
 
             $nameFile = null;
-         
-            if ($request->hasFile('image') && $request->file('image')->isValid()) 
+
+            if ($request->hasFile('image') && $request->file('image')->isValid())
             {
-                 
                 $name = Session::get('extensao')->id.date('Y_m_d_H_m_s');
-         
+
                 $extension = $request->image->extension();
-         
+
                 $nameFile = "{$name}.{$extension}";
-         
+
                 $upload = $request->image->storeAs('uploadEvetos', $nameFile);
-         
+
                 if ( !$upload )
                     return redirect()
                                 ->back()
                                 ->with('erro', 'Falha ao fazer upload')
                                 ->withInput();
-         
+
             }
 
 
@@ -92,19 +93,19 @@ class ControllerEvento extends Controller
     		    'idUsuarioCex' => Session::get('extensao')->id
             ]);
 
-            try 
+            try
             {
             	$evento->save();
 
             	return redirect('evento/criar')->with('success','Evento salvo com sucesso!');
-            } 
-            catch (Exception $e) 
+            }
+            catch (Exception $e)
             {
             	return redirect('evento/criar')->with('erro','Erro ao criar evento!');
             }
-            
+
         }
-  
+
     }
 
     public function show($id)
@@ -127,7 +128,7 @@ class ControllerEvento extends Controller
 
             return view('evento.show')->with(compact('evento'),('interesse'));
         }
-        
+
 
         return view('evento.show')->with(compact('evento'));
     }
@@ -164,13 +165,13 @@ class ControllerEvento extends Controller
             $evento->local = $request->get('local');
     		$evento->qtdVagas = $request->get('qtdVagas');
 
-    		try 
+    		try
             {
             	$evento->save();
 
             	return redirect('evento/criar')->with('success','Evento alterado com sucesso!');
-            } 
-            catch (Exception $e) 
+            }
+            catch (Exception $e)
             {
             	return redirect('evento/criar')->with('erro','Erro ao criar evento!');
             }
@@ -191,7 +192,7 @@ class ControllerEvento extends Controller
             catch (\PDOException $e)
             {
                 return redirect()->route('evento.index')->with('error', $e->getCode());
-            } 
+            }
         }
     }
 }

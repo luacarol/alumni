@@ -33,7 +33,7 @@ Route::post('cadastro/salvar', 'CadastroController@store')->name('cadastro.salva
 Route::get('login', 'LoginController@index')->name('login');
 Route::post('logar', 'LoginController@login')->name('logar');
 Route::get('logout', 'LoginController@logout')->name('logout');
- 
+
 
 //================================================================================================
 //==================					  ROTAS DE EVENTO 						==================

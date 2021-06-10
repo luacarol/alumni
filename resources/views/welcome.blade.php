@@ -116,7 +116,7 @@
           @foreach($noticias as $noticia)
             <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
               <div class="icon-box">
-                <h4 class="title"><a href="">{{$noticia->titulo}}</a></h4>
+                <h4 class="title"><a href="{{route('cadastro')}}">{{$noticia->titulo}}</a></h4>
                 <p class="description">{{$noticia->lide}}</p>
               </div>
             </div>

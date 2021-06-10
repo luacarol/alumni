@@ -33,6 +33,7 @@ class NoticiaController extends Controller
                         ->where('cpfAluno',Session::get('aluno')->cpf)
                         ->select('matricula.idCampus')
                     )->select('id'))
+                ->orderBy('id', 'desc')
                 ->get();
                 
             return view('noticia.noticia-listar-aluno')->with(compact(('noticias')));

@@ -24,7 +24,7 @@
                                 </div>
                                 <div class="col-md-6 ">
                                     <p class="ml-md-2"><strong>Local: </strong> {{$evento->local}}</p>
-                                    <p class="ml-md-2"><strong>Interesse de Egressos: </strong> 
+                                    <p class="ml-md-2"><strong>Interesse de Egressos: </strong>
                                     @if(isset($interesse))
                                         {{$interesse}}
                                     @else

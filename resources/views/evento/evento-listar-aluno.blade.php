@@ -20,8 +20,8 @@
                                 @endif
                                  <div class="col-lg-7 mb-3 mt-3">
                                     <h3 class="text-capitalize">{{$evento->titulo}}
-                                        
-                                    </h3> 
+
+                                    </h3>
                                     <p>Dia {{date('d/m/Y',strtotime($evento->data))}} das {{$evento->horarioIn}} às {{$evento->horarioFin}} </p>
                                     {{-- <small>Número de egressos interessados: {{count($evento->interessados)}}</small> --}}
                                     <p class="text-justify">@php echo $evento->descricao; @endphp</p>
@@ -31,12 +31,12 @@
                             <hr style="border: 1px dashed #d3d3d3;">
                         @endforeach
                     </div>
-                        
+
                 </div>
             </div>
         </div>
     </div>
-                    
+
 @endsection
 
 @section('script')

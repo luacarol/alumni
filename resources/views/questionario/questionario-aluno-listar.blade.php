@@ -9,12 +9,12 @@
                 <div class="card-header border-0">
                     @if(session()->get('success'))
                         <div class="alert alert-dismissible alert-success col-12">
-                          {{ session()->get('success') }}  
+                          {{ session()->get('success') }}
                         </div>
                     @endif
                     @if(session()->get('erro'))
                         <div class="alert alert-dismissible alert-danger col-12">
-                          {{ session()->get('erro') }}  
+                          {{ session()->get('erro') }}
                         </div>
                     @endif
                     @if ($errors->any())
@@ -37,11 +37,13 @@
                                             <div>
                                                 <h3>{{$questionario->titulo}}</h3>
                                             </div>
+
                                             <p>
                                                 @php
                                                     echo($questionario->descricao);
                                                 @endphp
                                             </p>
+
                                             <a href="{{route('questionario.ver',[$questionario->id,$questionario->aplicacao])}}" class="btn btn-primary float-right">Responder Questionário</a>
                                         </div>
                                     </div>

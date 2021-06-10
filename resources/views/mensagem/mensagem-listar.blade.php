@@ -10,12 +10,12 @@
                     <div class="card-header border-0 row">
                         @if(session()->get('success'))
                             <div class="alert alert-dismissible alert-success col-12">
-                              {{ session()->get('success') }}  
+                              {{ session()->get('success') }}
                             </div>
                         @endif
                         @if(session()->get('erro'))
                             <div class="alert alert-dismissible alert-danger col-12">
-                              {{ session()->get('erro') }}  
+                              {{ session()->get('erro') }}
                             </div>
                         @endif
                         @if ($errors->any())
@@ -40,7 +40,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                  
+
                         @if($mensagens->count() == 0)
                         <tr>
                             <td class="text-center" colspan="4">Nenhuma mensagem recebida</td>
@@ -56,7 +56,7 @@
                                     <td class="text-center text-gray-dark">Não Visualizado</td>
                                 @endif
                                 <td class="text-center">
-                                    <a href="{{route('mensagem.ler',$mensagem->id)}}" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Visualizar">
+                                    <a href="{{route('mensagem.ler',$mensagem->idCampus)}}" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Visualizar">
                                         <i class="fas fa-eye"></i>
                                     </a>
                                 </td>
@@ -70,7 +70,7 @@
         </div>
     </div>
 </div>
-                    
+
 @endsection
 
 @section('script')
