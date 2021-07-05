@@ -12,7 +12,7 @@
                 <div class="card-body">
                     @if($evento->imagem != '')
                     	<div class="col-12 mb-5 d-flex justify-content-center">
-                            <img class="img-fluid" src="{{ url("storage/uploadEvetos/{$evento->imagem}") }}">
+                            <img class="img-fluid" name="image" src="{{ url("storage/uploadEvetos/{$evento->imagem}") }}">
     					</div>
                     @endif
                     <div class="col-12 mt-3 card shadow">

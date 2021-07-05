@@ -14,12 +14,12 @@
                 <div class="card-header border-0 row">
                     @if(session()->get('success'))
                         <div class="alert alert-dismissible alert-success col-12">
-                          {{ session()->get('success') }}  
+                          {{ session()->get('success') }}
                         </div>
                     @endif
                     @if(session()->get('erro'))
                         <div class="alert alert-dismissible alert-danger col-12">
-                          {{ session()->get('erro') }}  
+                          {{ session()->get('erro') }}
                         </div>
                     @endif
                     @if ($errors->any())
@@ -43,7 +43,7 @@
                     @if(isset($evento))
                         <form action="{{route('evento.atualizar',$evento->id)}}" method="POST" enctype="multipart/form-data">
                     @else
-                        <form action="{{route('evento.salvar')}}" method="POST" enctype="multipart/form-data">
+                        <form action="{{route('evento.salvar')}}" method="POST" action="redimensionarImagem.php" enctype="multipart/form-data">
                     @endif
                         <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                         <div class="form-row">
@@ -95,7 +95,7 @@
                         <div class="form-row">
                             @if(!isset($evento))
                                 <div class="col-md-5 mb-3 form-group mt-4">
-                                    <label for="image" class="btn btn-block btn-info mt-2">Anexar Imagem <i class="fas fa-image ml-2"></i> 
+                                    <label for="image" class="btn btn-block btn-info mt-2">Anexar Imagem <i class="fas fa-image ml-2"></i>
                                         <span id='file-name'></span>
                                     </label>
                                     <input type="file" class="form-control form-control-alternative d-none" id="image" name="image"/>
