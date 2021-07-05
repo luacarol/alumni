@@ -81,7 +81,7 @@ class QuestionarioController extends Controller
   
     }
 
-    public function show(Request $request, $id,$aplicacao)
+    public function show(Request $request, $id, $aplicacao)
     {
         if(Session::has('extensao'))
         {
