@@ -51,6 +51,7 @@
                             @endforeach
                         @else
                             <p class="text-center">Nenhum questionário disponível para resposta</p>
+                            <!-- <a class="btn btn-primaryfloat-right">Responder Questionário</a> -->
                         @endif
                     </div>
                 </div>

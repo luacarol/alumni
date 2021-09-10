@@ -156,7 +156,7 @@
 
         <div class="section-title" data-aos="fade-up">
           <h2>Contato</h2>
-          <p>Envie uma mensagem para uma CEX</p>
+          <p>Envie uma mensagem para nossa Coordenadoria</p>
         </div>
 
         <div class="row justify-content-center">

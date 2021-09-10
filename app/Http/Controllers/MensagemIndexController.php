@@ -61,6 +61,8 @@ class MensagemIndexController extends Controller
     {
         $mensagem = Mensagem::find($id);
 
+        //foreach($mnesagem)
+
     	$mensagem->status = 'V';
         $mensagem->visualizadoPor = Session::get('extensao')->id;
 

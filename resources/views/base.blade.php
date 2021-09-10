@@ -137,6 +137,11 @@
               </a>
             </li>
             <li class="nav-item">
+              <a class="nav-link " href="{{route('emprego.index')}}">
+                <i class="fas fa-newspaper"></i> Vagas de Emprego
+              </a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link " href="{{route('questionario.index')}}">
                 <i class="fab fa-wpforms"></i> Questionários
               </a>

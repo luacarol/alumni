@@ -113,7 +113,13 @@ Route::post('send', 'MensagemIndexController@send')->name('mensagem.enviar');
 Route::get('mensagens', 'MensagemIndexController@index')->name('mensagem.index');
 Route::get('mensagem/{id}/ler', 'MensagemIndexController@show')->name('mensagem.ler');
 
-
-
-
-
+//================================================================================================
+//==================					  ROTAS DE EMPREGO 						==================
+//================================================================================================
+Route::get('empregos', 'EmpregoController@index')->name('emprego.index');
+Route::get('empregos/visualizar/{id}', 'EmpregoController@show')->name('emprego.ver');
+Route::get('emprego/criar', 'EmpregoController@create')->name('emprego.criar');
+Route::post('emprego/salvar', 'EmpregoController@store')->name('emprego.salvar');
+Route::get('emprego/{id}/editar', 'EmpregoController@edit')->name('emprego.editar');
+Route::post('emprego/{id}/atualizar', 'EmpregoController@update')->name('emprego.atualizar');
+Route::get('emprego/{id}/deletar', 'EmpregoController@destroy')->name('emprego.deletar');
