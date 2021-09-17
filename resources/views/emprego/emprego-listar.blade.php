@@ -51,7 +51,7 @@
                             <tr>
                                 <td class="text-center">{{$emprego->id}}</td>
                                 <td class="text-center">{{$emprego->nomeVaga}}</td>
-                                <td class="text-center">{{$emprego->dataPublicacao}}</td>
+                                <td class="text-center">{{date('d/m/Y',strtotime($emprego->dataPublicacao))}}</td>
                                 <td class="text-center">
                                     <a href="{{route('emprego.editar', $emprego->id)}}" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Editar">
                                         <i class="fas fa-pencil-alt "></i>

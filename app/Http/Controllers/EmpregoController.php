@@ -20,7 +20,7 @@ class EmpregoController extends Controller
                     ->whereIn('idUsuarioCex',DB::table('usuariocex')
                     ->where('idCampus',Session::get('extensao')->idCampus)
                     ->select('id'))
-                    ->orderBy('dataPublicacao', 'asc')
+                    ->orderBy('id', 'asc')
                     ->get();
 
             return view('emprego.emprego-listar')->with(compact('empregos'));
@@ -35,7 +35,7 @@ class EmpregoController extends Controller
                     )->select('id'))
                 ->leftJoin('interesseemprego','interesseemprego.idEmprego','=','emprego.id')
                 ->select('emprego.*','interesseemprego.cpfAluno as interessados')
-                ->orderBy('dataPublicacao', 'desc')
+                ->orderBy('dataPublicacao', 'asc')
                 ->get();
 
             return view('emprego.emprego-listar-aluno')->with(compact(('empregos')));
@@ -157,7 +157,8 @@ class EmpregoController extends Controller
                 'atividadeVaga' => 'required',
                 'local' => 'required',
                 'horario' => 'required',
-    		    'qtdVaga' => 'required'
+                'dataPublicacao' => 'required',
+    		    'qtdVagas' => 'required'
             ]);
 
             $emprego = Emprego::find($id);
@@ -165,7 +166,7 @@ class EmpregoController extends Controller
             $emprego->nomeVaga = $request->get('nomeVaga');
             $emprego->salario = $request->get('salario');
             $emprego->preRequisitos = $request->get('preRequisitos');
-            $emprego->atividadesVaga = $request->get('atividadesVaga');
+            $emprego->atividadeVaga = $request->get('atividadesVaga');
             $emprego->local = $request->get('local');
             $emprego->horario = $request->get('horario');
             $emprego->dataPublicacao = date('Y-m-d',strtotime($request->get('dataPublicacao')));
