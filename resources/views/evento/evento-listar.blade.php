@@ -56,9 +56,7 @@
                                     <a href="{{route('evento.editar',$evento->id)}}" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Editar">
                                         <i class="fas fa-pencil-alt "></i>
                                     </a>
-                                    <a href="{{route('evento.deletar',$evento->id)}}" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Deletar">
-                                        <i class="far fa-trash-alt"></i>
-                                    </a>
+                                    <a href="{{route('evento.ver',$evento->id)}}" onclick="return confirm('Deseja mesmo deletar?');" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Deletar"><i class="far fa-trash-alt"></i></a>
                                     <a href="{{route('evento.ver',$evento->id)}}" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Visualizar">
                                         <i class="fas fa-eye"></i>
                                     </a>

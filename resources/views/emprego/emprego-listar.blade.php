@@ -56,7 +56,7 @@
                                     <a href="{{route('emprego.editar', $emprego->id)}}" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Editar">
                                         <i class="fas fa-pencil-alt "></i>
                                     </a>
-                                    <a href="{{route('emprego.deletar',$emprego->id)}}" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Deletar">
+                                    <a href="{{route('emprego.deletar',$emprego->id)}}" onclick="return confirm('Deseja mesmo deletar?');" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Deletar">
                                         <i class="far fa-trash-alt"></i>
                                     </a>
                                     <a href="{{route('emprego.ver',$emprego->id)}}" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Visualizar">
